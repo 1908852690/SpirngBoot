@@ -1,0 +1,30 @@
+package cn.springboot.service;
+
+import javax.annotation.Resource;
+
+import org.springframework.stereotype.Service;
+
+import cn.springboot.dao.TeacherDao;
+import cn.springboot.entity.Teacher;
+
+
+@Service
+public class TeacherService {
+	@Resource
+	private TeacherDao teacherDao;
+	
+	public void add(Teacher teacher)
+	{
+		teacherDao.save(teacher);
+	}
+	
+	public void del(Integer tid)
+	{
+		teacherDao.delete(tid);
+	}
+	
+	public Iterable<Teacher> getAll()
+	{
+		return teacherDao.findAll();
+	}
+}

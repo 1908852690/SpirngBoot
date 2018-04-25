@@ -1,0 +1,13 @@
+
+#
+spring.datasource.springboot1.driverClassName=com.mysql.jdbc.Driver
+spring.datasource.springboot1.url=jdbc:mysql://localhost:3306/springboot01
+spring.datasource.springboot1.username=root
+spring.datasource.springboot1.password=
+
+
+
+spring.datasource.springboot2.driverClassName=com.mysql.jdbc.Driver
+spring.datasource.springboot2.url=jdbc:mysql://localhost:3306/springboot01
+spring.datasource.springboot2.username=root
+spring.datasource.springboot2.password=

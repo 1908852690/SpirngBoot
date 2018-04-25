@@ -1,0 +1,1 @@
+spring.datasource.springboot1.driverClassName=com.mysql.jdbc.Driver

@@ -1,0 +1,50 @@
+package cn.springboot.SpringBoot_Data_JPA;
+
+
+
+import javax.annotation.Resource;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import cn.springboot.entity.Teacher;
+import cn.springboot.service.TeacherService;
+
+
+
+@RestController
+@RequestMapping("/teacher")
+@ComponentScan
+
+public class TeacherController {
+	//注入Service层对象
+	
+	@Resource
+	private TeacherService teacherService;
+	
+	@RequestMapping("/teacher/add")
+	public String add()
+	{
+		System.out.println("-----------add----------");
+		teacherService.add(new Teacher(1,"FLC","北京"));
+		return "add success";
+	}
+	
+	@RequestMapping("/del")
+	public String del()
+	{
+		System.out.println("----------del--------------");
+		teacherService.del(1);
+		return "del success";
+	}
+	
+	@RequestMapping("/getall")
+	public Iterable<Teacher> getall()
+	{
+		System.out.println("----------getall--------------");
+		Iterable<Teacher> all = teacherService.getAll();
+		return all;
+	}
+	
+	
+}

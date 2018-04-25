@@ -1,0 +1,5 @@
+package cn.springboot.config;
+
+public class MyBatisConfiguration {
+
+}

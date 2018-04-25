@@ -1,0 +1,5 @@
+#页面前缀
+spring.mvc.view.prefix=/WEB-INF/jsp
+
+#页面后缀
+spring.mvc.view.suffix=.jsp

@@ -1,0 +1,12 @@
+package cn.springboot.SpringBoot_Data_JPA;
+
+public class ExceptionTest {
+	public static void main(String[] args) {
+		Test test=new Test();
+		try {
+			test.testEx();
+		} catch (Exception e) {
+			
+		}
+	}
+}

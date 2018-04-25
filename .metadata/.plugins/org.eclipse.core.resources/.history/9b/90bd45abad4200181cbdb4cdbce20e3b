@@ -1,0 +1,22 @@
+package cn.springboot.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+@RequestMapping("/demo")
+public class DempController {
+	@ResponseBody
+    @RequestMapping(value = "/getcount", method = RequestMethod.POST)
+    @ApiOperation(value="测试-getCount", notes="getCount更多说明")
+    public ModelMap getCount(HttpServletRequest request,
+            HttpServletResponse response) {
+        logger.info(">>>>>>>> begin getCount >>>>>>>>");
+        ModelMap map = new ModelMap();
+        map.addAttribute("count", 158);
+        
+        // 后台获取的国际化信息
+        map.addAttribute("xstest", "测试");
+        return map;
+    }
+}

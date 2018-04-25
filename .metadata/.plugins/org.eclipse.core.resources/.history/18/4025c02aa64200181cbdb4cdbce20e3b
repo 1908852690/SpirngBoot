@@ -1,0 +1,7 @@
+package cn.springboot.config;
+@Configuration  
+@EnableSwagger  
+@EnableWebMvc 
+public class SwaggerConfig {
+
+}

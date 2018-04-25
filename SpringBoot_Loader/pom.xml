@@ -1,0 +1,42 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	
+	
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>cn.springboot</groupId>
+	<artifactId>SpringBoot_Loader</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
+	<name>SpringBoot_Loader</name>
+	<url>http://maven.apache.org</url>
+	
+	<!-- 配置springboot的父节点依赖，之后引入就不需要添加version配置了！ springboot会自动选择最合适的版本进行添加依赖 -->
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>1.4.1.RELEASE</version>
+	</parent>
+	
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<!--指定JDK版本 我们使用的是1.8，不配置默认环境是1.6 -->
+		<java.version>1.8</java.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<!-- spring-boot-starter-web是为我们提供了包括mvc,aop等需要的一些jar -->
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+			<!-- 因为我们已经配置了 parent 中的version 所以这里不需要指定version了 -->
+		</dependency>
+		
+		<!-- Spring-boot-devtools 其实配置了这个就不需要下面的所有内容了 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<optional>true</optional>
+		</dependency>
+	</dependencies>
+	
+</project>

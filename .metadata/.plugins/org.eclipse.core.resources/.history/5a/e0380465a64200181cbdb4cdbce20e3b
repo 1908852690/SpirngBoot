@@ -1,0 +1,47 @@
+package cn.springboot.config;
+
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
+
+@Configuration  
+@EnableSwagger2  
+@EnableWebMvc 
+public class SwaggerConfig {
+	private SpringSwaggerConfig springSwaggerConfig;  
+	  
+    /** 
+     * Required to autowire SpringSwaggerConfig 
+     */  
+    @Autowired  
+    public void setSpringSwaggerConfig(SpringSwaggerConfig springSwaggerConfig)  
+    {  
+        this.springSwaggerConfig = springSwaggerConfig;  
+    }  
+  
+    /** 
+     * Every SwaggerSpringMvcPlugin bean is picked up by the swagger-mvc 
+     * framework - allowing for multiple swagger groups i.e. same code base 
+     * multiple swagger resource listings. 
+     */  
+    @Bean  
+    public SwaggerSpringMvcPlugin customImplementation()  
+    {  
+        return new SwaggerSpringMvcPlugin(this.springSwaggerConfig)  
+                .apiInfo(apiInfo())  
+                .includePatterns(".*api*.*");  
+    }  
+      
+    private ApiInfo apiInfo()  
+    {  
+        ApiInfo apiInfo = new ApiInfo(  
+                "吃瓜app",  
+                "接口文档",  
+                "",  
+                "ywd979@foxmail.com",  
+                "",  
+                "");  
+        return apiInfo;  
+    }  
+}

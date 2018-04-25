@@ -1,0 +1,7 @@
+package cn.springboot.entity;
+
+public class Teacher {
+	private Integer tid;
+	private String taddress;
+	private String tname;
+}

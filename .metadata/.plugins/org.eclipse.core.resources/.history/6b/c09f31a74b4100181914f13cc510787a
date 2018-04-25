@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>cn.springboot</groupId>
+	<artifactId>SpringBoot_Jsp</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>war</packaging>
+
+	<name>SpringBoot_Jsp Maven Webapp</name>
+	<!-- FIXME change it to the project's website -->
+	<url>http://www.example.com</url>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>1.4.1.RELEASE</version>
+	</parent>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.source>1.7</maven.compiler.source>
+		<maven.compiler.target>1.7</maven.compiler.target>
+		<java.version>1.8</java.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<!-- spring-boot-starter-web是为我们提供了包括mvc,aop等需要的一些jar -->
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+			<!-- 因为我们已经配置了 parent 中的version 所以这里不需要指定version了 -->
+		</dependency>
+
+		<!-- Spring-boot-devtools -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<optional>true</optional>
+		</dependency>
+		<!-- 配置servlet需要的依赖 -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+		</dependency>
+		<!-- 配置jstl标签库需要的依赖 -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+		</dependency>
+
+		<!-- 添加tomcat的支持 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-tomcat</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.tomcat.embed</groupId>
+			<artifactId>tomcat-embed-jasper</artifactId>
+		</dependency>
+	</dependencies>
+<dependency>  
+            <groupId>org.springframework.boot</groupId>  
+            <artifactId>spring-boot-devtools</artifactId>  
+            <optional>true</optional>  
+   </dependency>  
+	<!-- <build> <finalName>SpringBoot_Jsp</finalName> <pluginManagement>lock 
+		down plugins versions to avoid using Maven defaults (may be moved to parent 
+		pom) <plugins> <plugin> <artifactId>maven-clean-plugin</artifactId> <version>3.0.0</version> 
+		</plugin> see http://maven.apache.org/ref/current/maven-core/default-bindings.html#Plugin_bindings_for_war_packaging 
+		<plugin> <artifactId>maven-resources-plugin</artifactId> <version>3.0.2</version> 
+		</plugin> <plugin> <artifactId>maven-compiler-plugin</artifactId> <version>3.7.0</version> 
+		</plugin> <plugin> <artifactId>maven-surefire-plugin</artifactId> <version>2.20.1</version> 
+		</plugin> <plugin> <artifactId>maven-war-plugin</artifactId> <version>3.2.0</version> 
+		</plugin> <plugin> <artifactId>maven-install-plugin</artifactId> <version>2.5.2</version> 
+		</plugin> <plugin> <artifactId>maven-deploy-plugin</artifactId> <version>2.8.2</version> 
+		</plugin> </plugins> </pluginManagement> </build> -->
+</project>

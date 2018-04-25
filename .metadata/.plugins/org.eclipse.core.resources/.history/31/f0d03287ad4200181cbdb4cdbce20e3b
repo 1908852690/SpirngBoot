@@ -1,0 +1,19 @@
+package cn.springboot.controller;
+
+import io.swagger.annotations.ApiOperation;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+@Controller
+@RequestMapping("/api/test")
+public class TestController {
+	@ResponseBody
+	@RequestMapping(value = "/show", method = RequestMethod.POST)
+	@ApiOperation(value = "测试接口", notes = "测试接口详细描述")
+	public String show(
+			@ApiParam(required = true, name = "name", value = "姓名") @RequestParam(name = "name") String stuName) {
+		return "success";
+	}
+}

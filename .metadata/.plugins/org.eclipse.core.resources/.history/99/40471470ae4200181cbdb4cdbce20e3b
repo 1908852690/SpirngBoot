@@ -1,0 +1,8 @@
+package cn.springboot.entity;
+
+import io.swagger.annotations.ApiModel;
+
+@ApiModel("User(用户模型)")
+public class User {
+
+}

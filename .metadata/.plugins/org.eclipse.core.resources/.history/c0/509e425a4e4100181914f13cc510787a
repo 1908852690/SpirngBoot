@@ -1,0 +1,5 @@
+package cn.springboot.service;
+
+public class TeacherService {
+
+}

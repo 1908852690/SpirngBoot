@@ -1,0 +1,5 @@
+package cn.springboot.dao;
+
+public interface TeacherDao {
+	public List<Teacher> getAllTeacher();
+}
