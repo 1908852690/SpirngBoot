@@ -10,7 +10,7 @@ public class HelloController {
 	public String hello(Model model)
 	{
 		System.out.println("进入Controller");
-		model.addAttribute("name","小黑");
+		model.addAttribute("name","小白");
 		return "index";
 	}
 }
